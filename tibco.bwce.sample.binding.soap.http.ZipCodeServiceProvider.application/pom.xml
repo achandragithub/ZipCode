@@ -17,11 +17,11 @@
   
    <distributionManagement>
 		<snapshotRepository>
-			<id>maven-snapshots</id>
+			<id>tibcopsgnexus</id>
 			<url>https://nexus.tibcopsg.net/repository/maven-snapshots/</url>
 		</snapshotRepository>
 		<repository>
-			<id>maven-releases</id>
+			<id>tibcopsgnexus</id>
 			<url>https://nexus.tibcopsg.net/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
