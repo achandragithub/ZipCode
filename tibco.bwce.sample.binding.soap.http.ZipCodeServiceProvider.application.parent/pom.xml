@@ -6,6 +6,8 @@
   <artifactId>tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application.parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  
   <modules>
     <module>../tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider</module>
     <module>../tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application</module>

@@ -64,6 +64,12 @@
                     <xs:element
                         block="extension restriction substitution"
                         form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType block="extension restriction"
@@ -115,6 +121,17 @@
                 </complexContent>
             </complexType>
             <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20160514202349PLT"

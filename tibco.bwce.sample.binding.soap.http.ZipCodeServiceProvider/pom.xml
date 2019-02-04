@@ -10,6 +10,18 @@
   </parent>
   <artifactId>tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider</artifactId>
   <packaging>bwmodule</packaging>
+ 
+   <distributionManagement>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>maven-releases</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+ 
   <dependencies>
     <dependency>
       <groupId>com.tibco.plugins</groupId>

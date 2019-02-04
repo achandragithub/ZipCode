@@ -14,6 +14,18 @@
     <k8s.property.file>k8s-dev.properties</k8s.property.file>
     <docker.property.file>docker-dev.properties</docker.property.file>
   </properties>
+  
+   <distributionManagement>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>maven-releases</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+	
   <build>
     <plugins>
       <plugin>
