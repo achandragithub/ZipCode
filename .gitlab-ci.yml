@@ -13,16 +13,16 @@ cache:
 build:
   stage: build
   script:
-    - mvn $MAVEN_CLI_OPTS -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
+    - mvn $MAVEN_CLI_OPTS -Dfabric8.build.pullSecret=$DOCKER_PASSWORD -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
 
-test:
-  stage: test
-  script:
-    - mvn $MAVEN_CLI_OPTS $DOCKER_OPTS deploy
+#test:
+#  stage: test
+#  script:
+#    - mvn $MAVEN_CLI_OPTS $DOCKER_OPTS deploy
 
-deploy:
-  stage: deploy
-  script:
-    - mvn $MAVEN_CLI_OPTS deploy
-  only:
-    - master
+#deploy:
+#  stage: deploy
+#  script:
+#    - mvn $MAVEN_CLI_OPTS deploy
+#  only:
+#    - master
