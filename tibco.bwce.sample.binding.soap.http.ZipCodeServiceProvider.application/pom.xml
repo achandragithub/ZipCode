@@ -12,7 +12,7 @@
   <packaging>bwear</packaging>
   <properties>
     <k8s.property.file>k8s-dev.properties</k8s.property.file>
-    <docker.property.file>tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/docker-dev.properties</docker.property.file>
+    <docker.property.file>docker-dev.properties</docker.property.file>
   </properties>
   
    <distributionManagement>
