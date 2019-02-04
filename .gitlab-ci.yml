@@ -13,7 +13,7 @@ cache:
 build:
   stage: build
   script:
-    - mvn $MAVEN_CLI_OPTS -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build fabric8:push
+    - mvn $MAVEN_CLI_OPTS -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
 
 test:
   stage: test
