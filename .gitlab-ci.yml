@@ -32,7 +32,7 @@ maven-build:
   script:
    - mvn $MAVEN_CLI_OPTS -DskipTests clean initialize package install
    
-maven-deploy-nexus: test
+maven-deploy-nexus: 
   stage: package
   image: maven:3-jdk-8
   script:
