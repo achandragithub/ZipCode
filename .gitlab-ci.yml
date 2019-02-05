@@ -7,7 +7,10 @@ variables:
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
 #  DOCKER_OPTS: "-Ddocker.username=jolokia -Ddocker.password=s!cr!t" 
   DOCKER_OPTS: "-u $DOCKER_USER -p $DOCKER_PASSWORD" 
-
+  DOCKER_HOST: tcp://docker:2375/
+   # When using dind, it's wise to use the overlayfs driver for
+   # improved performance.
+  DOCKER_DRIVER: overlay2
 
 cache:
   paths:
@@ -19,6 +22,9 @@ stages:
   - package
   - deploy
 
+before_script:
+  - docker info
+   
 maven-build:
   stage: build
   image: maven:3-jdk-8
