@@ -30,21 +30,17 @@ maven-build:
   stage: build
   image: maven:3-jdk-8
   script:
-   - mvn $MAVEN_CLI_OPTS -DskipTests clean initialize package install
+   - mvn $MAVEN_CLI_OPTS -DskipTests clean initialize package install deploy
    
-maven-deploy-nexus: 
-  stage: package
-  image: maven:3-jdk-8
-  script:
-   - mvn $MAVEN_CLI_OPTS -DskipTests clean initialize install deploy
-
 docker-build:
   stage: package
+  dependencies: 
+    - build
   script:
    - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
    - docker build -t nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest .
    - docker push nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest
-
+  
 run-unit-tests:
   stage: test
   image: maven:3-jdk-8
