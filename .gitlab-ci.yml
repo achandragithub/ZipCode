@@ -3,7 +3,7 @@ services:
   - docker:dind
 
 variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application"
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
 #  DOCKER_OPTS: "-Ddocker.username=jolokia -Ddocker.password=s!cr!t" 
   DOCKER_OPTS: "-u $DOCKER_USER -p $DOCKER_PASSWORD" 
