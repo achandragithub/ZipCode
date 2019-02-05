@@ -26,7 +26,8 @@ maven-build:
 docker-build:
   stage: package
   script:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD hub.docker.com  # Login first in case we need to pull from a private registry.
+  - docker login -u mbloomfi@tibco.com -p Tibco123  nexus.tibcopsg.net:18079
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD hub.docker.com  # Login first in case we need to pull from a private registry.
   - docker build -t mbloomfi/zipcodeexample .
   - docker push mbloomfi/zipcodeexample
 
