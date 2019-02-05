@@ -38,11 +38,6 @@ docker-build:
    - docker build -t nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest .
    - docker push nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest
 
-#build:
-#  stage: build
-# script:
-#   - mvn $MAVEN_CLI_OPTS -Dfabric8.build.pullSecret=$DOCKER_PASSWORD -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
-
 #test:
 #  stage: test
 #  script:
