@@ -5,7 +5,6 @@ services:
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-#  DOCKER_OPTS: "-Ddocker.username=jolokia -Ddocker.password=s!cr!t" 
   DOCKER_OPTS: "-u $DOCKER_USER -p $DOCKER_PASSWORD" 
   DOCKER_HOST: tcp://localhost:2375
    # When using dind, it's wise to use the overlayfs driver for
@@ -23,9 +22,6 @@ stages:
   - test
   - deploy
 
- #before_script:
- #  - docker info
-   
 maven-build:
   stage: build
   image: maven:3-jdk-8
@@ -35,7 +31,7 @@ maven-build:
 docker-build:
   stage: package
   dependencies: 
-    - build
+   - build
   script:
    - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
    - docker build -t nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest .
