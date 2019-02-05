@@ -29,10 +29,9 @@ maven-build:
    - mvn $MAVEN_CLI_OPTS -DskipTests clean initialize package install deploy
   artifacts:
     name: "intsearchui-$CI_BUILD_ID-$CI_BUILD_REF"
-    expire_in: 1 week
+    expire_in: 1 day
     paths:
-     - target/*.ear
-
+     - tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target/*.ear
    
 docker-build:
   stage: package
