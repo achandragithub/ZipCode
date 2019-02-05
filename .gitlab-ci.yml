@@ -12,6 +12,11 @@ cache:
     - .m2/repository/
     - target/
 
+stages:
+  - build
+  - package
+  - deploy
+
 maven-build:
   stage: build
   image: maven:3-jdk-8
