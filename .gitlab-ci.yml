@@ -29,8 +29,8 @@ docker-build:
   stage: package
   script:
    - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
-   - sudo docker build -t nexus.tibcopsg.net/bwce/zipcodeexample:latest .
-   - sudo docker push nexus.tibcopsg.net/bwce/zipcodeexample:latest
+   - docker build -t nexus.tibcopsg.net/bwce/zipcodeexample:latest .
+   - docker push nexus.tibcopsg.net/bwce/zipcodeexample:latest
 
 #build:
 #  stage: build
