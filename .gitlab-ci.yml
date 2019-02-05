@@ -13,9 +13,18 @@ cache:
     - target/
 
 maven-build:
+  stage: build
   image: maven:3-jdk-8
   script:
    - mvn $MAVEN_CLI_OPTS clean initialize package install 
+
+docker-build:
+  stage: package
+  script:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD   # Login first in case we need to pull from a private registry.
+  - docker build -t mbloomfi/zipcodeexample .
+  - docker push mbloomfi/zipcodeexample
+
 
 #build:
 #  stage: build
