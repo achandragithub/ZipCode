@@ -1,4 +1,6 @@
-image: maven:latest
+image: docker:latest
+services:
+  - docker:dind
 
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application -DskipTests"
@@ -10,10 +12,15 @@ cache:
     - .m2/repository/
     - target/
 
-build:
-  stage: build
+maven-build:
+  image: maven:3-jdk-8
   script:
-    - mvn $MAVEN_CLI_OPTS -Dfabric8.build.pullSecret=$DOCKER_PASSWORD -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
+   - mvn $MAVEN_CLI_OPTS clean initialize package install 
+
+#build:
+#  stage: build
+# script:
+#   - mvn $MAVEN_CLI_OPTS -Dfabric8.build.pullSecret=$DOCKER_PASSWORD -Ddocker.username=$DOCKER_USER -Ddocker.password=$DOCKER_PASSWORD clean initialize package install docker:build docker:push
 
 #test:
 #  stage: test
