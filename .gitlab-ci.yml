@@ -30,8 +30,8 @@ docker-build:
   script:
   - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
 #  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD hub.docker.com  # Login first in case we need to pull from a private registry.
-  - docker build -t nexus.tibcopsg.net:bwce/zipcodeexample .
-  - docker push nexus.tibcopsg.net:bwce/zipcodeexample
+  - docker build -t nexus.tibcopsg.net:bwce/zipcodeexample:latest .
+  - docker push nexus.tibcopsg.net:bwce/zipcodeexample:latest
 
 
 #build:
