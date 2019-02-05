@@ -30,8 +30,6 @@ maven-build:
    
 docker-build:
   stage: package
-  dependencies: 
-   - build
   script:
    - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
    - docker build -t nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest .
