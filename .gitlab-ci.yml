@@ -39,6 +39,7 @@ docker-build:
    - docker login -u mbloomfi@tibco.com -p Tibco123 nexus.tibcopsg.net:18079
    - docker build -t nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest .
    - docker push nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest
+   - docker tag nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest mbloomfi/zipcodeexample:latest
   
 run-unit-tests:
   stage: test
