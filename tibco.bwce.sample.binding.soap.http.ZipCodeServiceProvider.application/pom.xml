@@ -13,7 +13,7 @@
   <properties>
     <k8s.property.file>k8s-dev.properties</k8s.property.file>
     <docker.property.file>docker-dev.properties</docker.property.file>
-    <sonar.sources>../tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider</sonar.sources>
+    <sonar.projectBaseDir>../</sonar.projectBaseDir>
     <sonar.projectKey>ZipcodeExample</sonar.projectKey>
   </properties>
   
