@@ -12,6 +12,7 @@
   <packaging>bwmodule</packaging>
   <properties>
     <sonar.projectKey>ZipcodeService</sonar.projectKey>
+    <sonar.sources>.</sonar.sources>
   </properties>
    <distributionManagement>
 		<snapshotRepository>
