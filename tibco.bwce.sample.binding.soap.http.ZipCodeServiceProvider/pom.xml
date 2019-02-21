@@ -12,7 +12,7 @@
   <packaging>bwmodule</packaging>
   <properties>
     <sonar.projectKey>ZipcodeService</sonar.projectKey>
-    <sonar.cpd.exclusions>src/test</sonar.cpd.exclusions>
+    <sonar.cpd.exclusions>src/test/java</sonar.cpd.exclusions>
   </properties>
    <distributionManagement>
 		<snapshotRepository>
