@@ -1,2 +1,4 @@
 tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target
 tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/target
+.sonar_lock
+tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/.scannerwork
