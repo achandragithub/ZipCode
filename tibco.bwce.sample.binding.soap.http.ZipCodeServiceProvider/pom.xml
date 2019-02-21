@@ -10,7 +10,10 @@
   </parent>
   <artifactId>tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider</artifactId>
   <packaging>bwmodule</packaging>
- 
+  <properties>
+    <sonar.sources>Processes,Resources</sonar.sources>
+    <sonar.projectKey>ZipcodeService</sonar.projectKey>
+  </properties>
    <distributionManagement>
 		<snapshotRepository>
 			<id>tibcopsgnexus</id>
