@@ -43,11 +43,11 @@ docker-build:
    - docker login -u mbloomfi -p Iamcrazy01 docker.io
    - docker push mbloomfi/zipcodeexample:latest
   
-run-unit-tests:
+run-code-quality-check:
   stage: test
   image: maven:3-jdk-8
   script:
-    - mvn $MAVEN_CLI_OPTS test
+    - mvn $MAVEN_CLI_OPTS sonar:sonar 
 
 #deploy:
 #  stage: deploy
