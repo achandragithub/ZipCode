@@ -47,7 +47,7 @@ run-code-quality-check:
   stage: test
   image: maven:3-jdk-8
   script:
-    - mvn $MAVEN_CLI_OPTS sonar:sonar 
+    - mvn -s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider sonar:sonar 
 
 #deploy:
 #  stage: deploy
