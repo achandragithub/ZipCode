@@ -32,7 +32,7 @@ maven-build:
     expire_in: 1 day
     paths:
      - tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target/*.ear
-   
+
 docker-build:
   stage: package
   script:
@@ -42,7 +42,13 @@ docker-build:
    - docker tag nexus.tibcopsg.net:18079/bwce/zipcodeexample:latest mbloomfi/zipcodeexample:latest
    - docker login -u mbloomfi -p Iamcrazy01 docker.io
    - docker push mbloomfi/zipcodeexample:latest
-  
+
+hadolint:
+  stage: test
+  image: pipelinecomponents/hadolint:latest
+  script:
+    - hadolint Dockerfile
+
 run-code-quality-check:
   stage: test
   image: maven:3-jdk-8
