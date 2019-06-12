@@ -7,10 +7,10 @@ variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
   DOCKER_OPTS: "-u $DOCKER_USER -p $DOCKER_PASSWORD" 
-  DOCKER_HOST: tcp://localhost:2375
+#  DOCKER_HOST: tcp://localhost:2375
    # When using dind, it's wise to use the overlayfs driver for
    # improved performance.
-  DOCKER_DRIVER: overlay2
+#  DOCKER_DRIVER: overlay2
 
 cache:
   paths:
