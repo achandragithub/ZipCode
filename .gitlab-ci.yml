@@ -35,11 +35,11 @@ maven-build:
 docker-build:
   stage: package
   script:
-    - echo 'hello'    
+    - echo hello    
 #   - sudo docker info
-   - sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
-   - sudo docker build -t harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest .
-   - sudo docker push harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest
+#   - sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
+#   - sudo docker build -t harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest .
+#   - sudo docker push harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest
 
 hadolint:
   stage: test
