@@ -1,6 +1,4 @@
-image: docker:stable
-services:
-  - docker:dind
+image: docker:19.03.0
 
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application"
@@ -14,6 +12,9 @@ cache:
   paths:
     - .m2/repository/
     - target/
+
+services:
+  - docker:19.03.0-dind
 
 stages:
   - build
