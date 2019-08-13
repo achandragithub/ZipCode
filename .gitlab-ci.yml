@@ -35,8 +35,8 @@ maven-build:
 docker-build:
   stage: package
   script:
-  - docker info
-   - docker login --username $DOCKER_USER --password $DOCKER_PASSWORD $DOCKER_URL
+   - docker info
+   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
    - docker build -t harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest .
    - docker push harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest
 
