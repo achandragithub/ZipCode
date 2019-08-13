@@ -21,6 +21,9 @@ stages:
   - test
   - deploy
 
+before_script:
+  - docker info
+
 maven-build:
   stage: build
   image: maven:3-jdk-8
