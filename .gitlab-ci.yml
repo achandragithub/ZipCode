@@ -21,9 +21,6 @@ stages:
   - test
   - deploy
 
-before_script:
-  - docker info
-
 maven-build:
   stage: build
   image: maven:3-jdk-8
@@ -35,13 +32,18 @@ maven-build:
     paths:
      - tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target/*.ear
 
+before_script:
+  - docker info
+
 docker-build:
   stage: package
+  image: docker:stable
   script:
     - docker build -t harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest .
 
 docker-push:
   stage: package
+  image: docker:stable
   script:
    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
    - docker push harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest
