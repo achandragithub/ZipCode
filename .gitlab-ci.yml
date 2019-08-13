@@ -32,9 +32,6 @@ maven-build:
     paths:
      - tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target/*.ear
 
-before_script:
-  - docker info
-
 docker-build:
   stage: package
   image: docker:stable
