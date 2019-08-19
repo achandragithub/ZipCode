@@ -7,6 +7,17 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   
+     <distributionManagement>
+		<snapshotRepository>
+			<id>tibcopsgnexus</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>tibcopsgnexus</id>
+			<url>https://nexus.tibcopsg.net/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+
   
   <modules>
     <module>../tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider</module>
