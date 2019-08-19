@@ -2,3 +2,6 @@ tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target
 tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/target
 .sonar_lock
 tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/.scannerwork
+report-task.txt
+TIB_bwpluginodata_6.2.1_linux26gl23_x86_64.zip
+TIB_bwpluginsap_8.2.2_linux26gl23_x86_64.zip

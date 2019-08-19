@@ -41,9 +41,6 @@ Bundle-ClassPath: .,
  external:/Users/markbloomfield/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.4/jackson-databind-2.7.4.jar,
  external:/Users/markbloomfield/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.jar
 Bundle-Vendor: TIBCO Software Inc.
-Export-Package: uk.iotservices.test.data,
- uk.iotservices.test.helper,
- uk.iotservices.test.unit
 TIBCO-BW-Version: 1.2.0 V19 2014-10-01
 TIBCO-BWCE-Edition-Target: cf
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
