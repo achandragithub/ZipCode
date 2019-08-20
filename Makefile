@@ -1,5 +1,5 @@
 build:
-	mvn -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application.parent clean initialize package install deploy docker:build -DskipTests 
+	mvn -s .m2/settings.xml -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application.parent clean initialize package install -DskipTests 
 push:
 	docker push mbloomfi/zipcodeexample
 
