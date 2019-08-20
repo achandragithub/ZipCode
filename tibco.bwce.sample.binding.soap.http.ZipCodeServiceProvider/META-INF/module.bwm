@@ -45,8 +45,8 @@
         <clientFormat>json</clientFormat>
         <clientFormat>xml</clientFormat>
       </operation>
-      <parameters xmi:id="_S45zoBozEeaH64ZA5uHaSw">
-        <parameterMapping xmi:id="_S45zoRozEeaH64ZA5uHaSw" parameterName="zip" parameterType="Path"/>
+      <parameters xmi:id="_DT8YYMLsEemiTbcEKKjbEQ">
+        <parameterMapping xmi:id="_DT8YYcLsEemiTbcEKKjbEQ" parameterName="zip" parameterType="Path" dataType="string" required="true"/>
       </parameters>
       <advancedConfig xmi:id="_F9ABACg7EemxVOYrHuWu6Q" blockingQueueSize="2147483647"/>
     </scaext:binding>
