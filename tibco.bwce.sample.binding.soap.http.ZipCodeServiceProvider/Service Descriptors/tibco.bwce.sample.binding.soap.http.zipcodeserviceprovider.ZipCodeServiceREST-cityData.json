@@ -21,7 +21,7 @@
           "in" : "path",
           "description" : "",
           "type" : "string",
-          "required" : false
+          "required" : true
         } ],
         "responses" : {
           "200" : {

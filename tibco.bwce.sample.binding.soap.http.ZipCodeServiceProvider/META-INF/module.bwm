@@ -31,19 +31,6 @@
           <outputMapping xmi:id="_GAwKxUp8EeS5QOpAWIuKAQ" direction="OUTPUT"/>
         </context>
       </operationConfiguration>
-      <operationConfiguration xmi:id="_8E924CkzEeeDssnnd5-qSw" operationName="operation" action="operation" actionNeeded="true">
-        <bindingType xmi:id="_8E924SkzEeeDssnnd5-qSw"/>
-        <messageConfiguration xmi:id="_8E924ikzEeeDssnnd5-qSw" messageQName="zip.example.com:operationRequest" wsdlLocation="platform:/resource/tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/Service%20Descriptors/ZipInfo.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8E924ykzEeeDssnnd5-qSw" partName="parameters" partElementName="namespace_1134438639123:operationRequest"/>
-        </messageConfiguration>
-        <messageConfiguration xmi:id="_8E925CkzEeeDssnnd5-qSw" messageQName="zip.example.com:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider/Service%20Descriptors/ZipInfo.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8E925SkzEeeDssnnd5-qSw" partName="parameters" partElementName="namespace_1134438639123:operationResponse"/>
-        </messageConfiguration>
-        <context xmi:id="_8E_FACkzEeeDssnnd5-qSw">
-          <inputMapping xmi:id="_8E_FASkzEeeDssnnd5-qSw"/>
-          <outputMapping xmi:id="_8E_FAikzEeeDssnnd5-qSw" direction="OUTPUT"/>
-        </context>
-      </operationConfiguration>
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_GAwKxkp8EeS5QOpAWIuKAQ" bindingName="SOAPServiceBinding"/>
   </sca:service>

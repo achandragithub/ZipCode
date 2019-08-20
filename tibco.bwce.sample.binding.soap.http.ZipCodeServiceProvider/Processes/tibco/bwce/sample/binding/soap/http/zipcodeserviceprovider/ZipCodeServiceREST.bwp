@@ -138,6 +138,7 @@
             xmlns:extns="http://xmlns.example.com/unique/default/namespace/1134438639123"
             xmlns:extns1="http://tns.tibco.com/bw/REST"
             xmlns:extns2="http://xmlns.example.com/20160514202349PLT/ConceptSchema"
+            xmlns:extns3="http://xmlns.example.com/cityData//parameters"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
             xmlns:ptyp="http://zip.example.com"
             xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -154,6 +155,7 @@
             <wsdl:import namespace="http://tns.tibco.com/bw/REST"/>
             <wsdl:import namespace="http://xmlns.example.com/20160514202349PLT/ConceptSchema"/>
             <wsdl:import namespace="http://zip.example.com"/>
+            <wsdl:import namespace="http://xmlns.example.com/cityData//parameters"/>
             <wsdl:message name="getRequest">
                 <wsdl:part element="extns1:httpHeaders"
                     name="httpHeaders" tibex:source="bw.rest"/>

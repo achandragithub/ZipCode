@@ -13,12 +13,6 @@
     <message name="cityDistanceResponse">
         <part element="ns:cityDistances" name="part1"/>
     </message>
-    <wsdl:message name="operationRequest">
-    <wsdl:part element="ns:operationRequest" name="parameters"/>
-  </wsdl:message>
-    <wsdl:message name="operationResponse">
-    <wsdl:part element="ns:operationResponse" name="parameters"/>
-  </wsdl:message>
     <portType name="ZipPort">
         <operation name="getCityInfo">
             <input message="impl:cityInfoRequest" name="zip"/>
@@ -28,9 +22,5 @@
             <input message="impl:cityDistanceRequest"/>
             <output message="impl:cityDistanceResponse"/>
         </operation>
-        <wsdl:operation name="operation">
-      <wsdl:input message="impl:operationRequest" name="operationInput"/>
-      <wsdl:output message="impl:operationResponse" name="operationOutput"/>
-    </wsdl:operation>
     </portType>
 </definitions>
