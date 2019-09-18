@@ -1,7 +1,7 @@
 image: docker:19.03.0
 
 variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f CurrencyConversionClient.application.parent"
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -f tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application.parent"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
    # When using dind, it's wise to use the overlayfs driver for
    # improved performance.
@@ -31,15 +31,15 @@ maven-build:
     name: "intsearchui-$CI_BUILD_ID-$CI_BUILD_REF"
     expire_in: 1 day
     paths:
-     - CurrencyConversionClient.application/target/*.ear
+     - tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application/target/*.ear
 
 docker-build:
   stage: package
   image: docker:stable
   script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
-    - docker build -t harbor-test.tibcopsg.net/cloud-demos/currencyConversion:latest .
-    - docker push harbor-test.tibcopsg.net/cloud-demos/CurrencyConversion:latest
+    - docker build -t harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest .
+    - docker push harbor-test.tibcopsg.net/cloud-demos/zipcodeexample:latest
 
 hadolint:
   stage: test
