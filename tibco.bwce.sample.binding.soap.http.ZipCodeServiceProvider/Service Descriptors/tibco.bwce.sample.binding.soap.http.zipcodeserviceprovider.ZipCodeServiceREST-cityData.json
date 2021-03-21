@@ -5,7 +5,7 @@
     "title" : "cityData/",
     "description" : "Summary about the new REST service."
   },
-  "host" : "localhost:8080",
+  "host" : "",
   "basePath" : "/",
   "schemes" : [ "http" ],
   "paths" : {
