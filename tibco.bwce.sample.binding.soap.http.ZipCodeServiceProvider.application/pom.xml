@@ -11,7 +11,7 @@
   <artifactId>tibco.bwce.sample.binding.soap.http.ZipCodeServiceProvider.application</artifactId>
   <packaging>bwear</packaging>
   <properties>
-    <skipTests>false</skipTests>
+    <skipTests>true</skipTests>
     <bw.Home>/bwce/2.6</bw.Home>
     <project.type>None</project.type>
     <failIfNoTests>false</failIfNoTests>
